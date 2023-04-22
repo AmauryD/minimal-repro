@@ -1,13 +1,13 @@
-import { somethingReturningFindOptions } from './b';
-import type { EntityRepository } from '@mikro-orm/core';
+import type { EntityRepository, FindOptions } from '@mikro-orm/core';
+
+// a function seems necessary to hang the server
+function somethingReturningFindOptions<T> (): FindOptions<T> {
+    return {} as never
+  }
 
 class UserModel  {
     // does not hang if removed
     declare firstName: string;
 }
 
-export class SomeService {
-  public async getOne () {
-    return (anything as EntityRepository<UserModel>).findOne(id, somethingReturningFindOptions(query));
-  }
-}
+({} as EntityRepository<UserModel>).findOne('one' as never, somethingReturningFindOptions());

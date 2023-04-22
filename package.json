@@ -5,7 +5,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@mikro-orm/core": "5.6.6",
+    "@mikro-orm/core": "5.6.16",
     "typescript": "5.0.4"
   },
   "devDependencies": {},
