@@ -1,5 +1,5 @@
 import type { FindOptions } from '@mikro-orm/core';
 
-export function jsonApiQueryToFindOptions<T> (): FindOptions<T> {
+export function somethingReturningFindOptions<T> (): FindOptions<T> {
     return {}
   }

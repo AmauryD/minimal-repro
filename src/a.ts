@@ -1,4 +1,4 @@
-import { jsonApiQueryToFindOptions } from './b';
+import { somethingReturningFindOptions } from './b';
 import type { EntityRepository } from '@mikro-orm/core';
 
 export class UserModel  {
@@ -7,6 +7,6 @@ export class UserModel  {
 
 export class UserResourceServiceImpl {
   public async getOne () {
-    return (anything as EntityRepository<UserModel>).findOne(id, jsonApiQueryToFindOptions(query));
+    return (anything as EntityRepository<UserModel>).findOne(id, somethingReturningFindOptions(query));
   }
 }
